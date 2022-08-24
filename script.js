@@ -1,3 +1,5 @@
+'use strict'
+
 let tc = 25
 let tf
 tf = 9 / 5 * tc + 32
