@@ -1,8 +1,8 @@
 //Домашнее задание 1
 
-/*'use strict'
+'use strict'
 
-let tc = 25
+/*let tc = 25
 let tf
 tf = 9 / 5 * tc + 32
 alert(tf)
@@ -186,35 +186,45 @@ console.log(risePower(5, 6))*/
 
 //Задача 1
 
-//НЕ ЗНАЮ КАК СДЕЛАТЬ ЭТО
+let result = '2 3 5 7';
+let i = 8;
+
+while (i <= 100) {
+    if (i % 2 && i % 3 && i % 5 && i % 7) {
+        result += ' ' + i;
+    }
+    i++;
+}
+
+console.log(result);
 
 //Задача 2
 
-let cartPrice = 0
+let cartPrice = 0;
 let cart = [
     ['Толстовка', 4, 2000],
     ['Шорты', 3, 1000],
     ['Брюки', 3, 2500],
     ['Кроссовки', 2, 5000]
-]
+];
 
 function countCartPrice() {
     for (i = 0; i < cart.length; i++) {
-        cartPrice = cartPrice + (cart[i][2] * cart[i][1])
-    }
+        cartPrice += cart[i][2] * cart[i][1]
+    };
 
-    return cartPrice
+    return cartPrice;
 }
 
-countCartPrice()
+countCartPrice();
 
 //Задача 3
 
-/*let a
+let a
 
 for (a = 0; a < 9; console.log(++a)) {
 
-}*/
+}
 
 
 
