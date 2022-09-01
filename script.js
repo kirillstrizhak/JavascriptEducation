@@ -276,40 +276,38 @@ function numToObject() {
 //Задача 2
 
 let cartPrice = 0;
-let products = [{       //Создаём массив товаров
-    name: 'Толстовка',
-    count: 4,
-    price: 2000
-},
-{
-    name: 'Шорты',
-    count: 3,
-    price: 1000
-},
-{
-    name: 'Брюки',
-    count: 3,
-    price: 2500
-},
-{
-    name: 'Кроссовки',
-    count: 2,
-    price: 5000
-}
-];
-
 let cart = {    //Создаём объект корзины со свойством массива и методом - функцией вычисления стоимости
-    products,
+    products: [{       //Создаём массив товаров
+        name: 'Толстовка',
+        count: 4,
+        price: 2000
+    },
+    {
+        name: 'Шорты',
+        count: 3,
+        price: 1000
+    },
+    {
+        name: 'Брюки',
+        count: 3,
+        price: 2500
+    },
+    {
+        name: 'Кроссовки',
+        count: 2,
+        price: 5000
+    }
+    ],
     countCartPrice: function () {
-        for (let i = 0; i < products.length; i++) {
-            cartPrice += products[i].count * products[i].price;
+        for (let i = 0; i < cart.products.length; i++) {
+            cartPrice += cart.products[i].count * cart.products[i].price;
         };
         console.log(`Общая цена корзины ${cartPrice}`)
         return cartPrice
     }
 }
 
-cart.countCartPrice() //Выводим полученное значение
+cart.countCartPrice() //Выводим полученное значение*/
 
 
 
