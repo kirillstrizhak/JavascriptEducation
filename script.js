@@ -1,17 +1,18 @@
 //Домашнее задание 1
 
-/*'use strict'
+'use strict'
 
-let tc = 25
+/*let tc = 25
 let tf
 tf = 9 / 5 * tc + 32
 alert(tf)
 
 let name = 'Василий'
-let admin = 'Василий'
+let admin
+name = admin
 alert(admin)*/
 
-alert('Домашнее задание 2 \nУважаемый преподаватель! Ответы на теоретические вопросы в комментариях в коде :)')
+//alert('Домашнее задание 3 \nУважаемый преподаватель! Ответы на теоретические вопросы в комментариях в коде :)')
 
 // Домашнее задание 2
 
@@ -35,7 +36,7 @@ var x = 1 + (a *= 2);
 
 //Задача 3
 
-let a = 6
+/*let a = 6
 let b = 4
 if (a, b > 0) {
     console.log(a - b)
@@ -177,7 +178,58 @@ function risePower(val, pow) {
 
 }
 
-console.log(risePower(5, 6))
+console.log(risePower(5, 6))*/
+
+//Домашнее задание 3
+
+//alert('Домашнее задание 3')
+
+//Задача 1
+
+let result = '2 3 5 7';
+let i = 8;
+
+while (i <= 100) {
+    if (i % 2 && i % 3 && i % 5 && i % 7) {
+        result += ' ' + i;
+    }
+    i++;
+}
+
+console.log(result);
+
+//Задача 2
+
+let cartPrice = 0;
+let cart = [
+    ['Толстовка', 4, 2000],
+    ['Шорты', 3, 1000],
+    ['Брюки', 3, 2500],
+    ['Кроссовки', 2, 5000]
+];
+
+function countCartPrice() {
+    for (i = 0; i < cart.length; i++) {
+        cartPrice += cart[i][2] * cart[i][1]
+    };
+
+    return cartPrice;
+}
+
+countCartPrice();
+
+//Задача 3
+
+let a
+
+for (a = 0; a < 9; console.log(++a)) {
+
+}
+
+
+
+
+
 
 
 
