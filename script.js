@@ -237,7 +237,7 @@ for (a = 0; a < 9; console.log(++a)) {
 
 getNumberProperties()*/
 
-alert('Домашнее задание 4')
+//Домашнее задание 4
 
 //Задача 1
 
@@ -271,12 +271,12 @@ function numToObject() {
     }
 }
 
-numToObject()
+//numToObject()
 
 //Задача 2
 
 let cartPrice = 0;
-let cart = [{
+let products = [{
     name: 'Толстовка',
     count: 4,
     price: 2000
@@ -298,15 +298,26 @@ let cart = [{
 }
 ];
 
-function countCartPrice() {
+let cart = {
+    products,
+    countCartPrice: function () {
+        for (let i = 0; i < products.length; i++) {
+            cartPrice += products[i].count * products[i].price;
+        };
+        console.log(`Общая цена корзины ${cartPrice}`)
+        return cartPrice
+    }
+}
+
+/*function countCartPrice() {
     for (let i = 0; i < cart.length; i++) {
         cartPrice += cart[i].count * cart[i].price
     };
 
     return cartPrice;
-}
+}*/
 
-console.log(countCartPrice())
+cart.countCartPrice()
 
 
 
