@@ -1,6 +1,6 @@
 //Домашнее задание 1
 
-'use strict'
+'use strict';
 
 /*let tc = 25
 let tf
@@ -241,7 +241,7 @@ getNumberProperties()*/
 
 //Задача 1
 
-function numToObject() {
+/*function numToObject() {
     let inputNumber = prompt('Введите целое число от 0 до 999');
     let arrNumber = inputNumber.split('');
     let objNumber = {};
@@ -275,7 +275,6 @@ function numToObject() {
 
 //Задача 2
 
-let cartPrice = 0;
 let cart = {    //Создаём объект корзины со свойством массива и методом - функцией вычисления стоимости
     products: [{       //Создаём массив товаров
         name: 'Толстовка',
@@ -299,6 +298,7 @@ let cart = {    //Создаём объект корзины со свойств
     }
     ],
     countCartPrice: function () {
+        let cartPrice = 0;
         for (let i = 0; i < cart.products.length; i++) {
             cartPrice += cart.products[i].count * cart.products[i].price;
         };
@@ -309,8 +309,77 @@ let cart = {    //Создаём объект корзины со свойств
 
 cart.countCartPrice() //Выводим полученное значение*/
 
+//Домашнее задание 5
+
+let block = document.querySelector('#root')
+
+console.log(block)
+
+function createChessBoard(parent, cols, rows) {     //Цикл создания строк
+    let table = document.createElement('table');
+    let j = 1
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+
+        for (let i = 0; i < cols/rows; i++) {       //Цикл чередования переменной, от которой будет зависеть цвет строк
+            if (j == 1) {
+                j--
+                console.log(j)
+                tr.className = 'blackCell'
+            } else {
+                j++
+                console.log(j)
+                tr.className = 'whiteCell'
+            }
+        };
+        
+        for (let i = 0; i < cols; i++) {            //Цикл создания столбцов      
+            let td = document.createElement('td');
+            tr.appendChild(td);
+
+            for (let i = 0; i < cols/rows; i++) {   //Цикл чередования переменной, от которой будет зависеть цвет столбцов
+                if (j == 1) {
+                    j--
+                    console.log(j)
+                    td.className = 'blackCell'
+                } else {
+                    j++
+                    console.log(j)
+                    td.className = 'whiteCell'
+                }
+            }
+    };
+    parent.appendChild(table);
+}
+
+}
+
+createChessBoard(block, 8, 8);
 
 
 
+
+
+// var elem = document.querySelector('#elem');
+
+// createTable(elem, 3, 3);
+
+// function createTable(parent, cols, rows) {
+// 	var table = document.createElement('table');
+	
+// 	for (var i = 0; i < rows; i++) {
+// 		var tr = document.createElement('tr');
+		
+// 		for (var j = 0; j < cols; j++) {
+// 			var td = document.createElement('td');
+// 			tr.appendChild(td);
+// 		}
+		
+// 		table.appendChild(tr);
+// 	}
+	
+// 	parent.appendChild(table);
+// }
 
 
