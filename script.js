@@ -322,64 +322,38 @@ function createChessBoard(parent, cols, rows) {     //Цикл создания 
         let tr = document.createElement('tr');
         table.appendChild(tr);
 
-        for (let i = 0; i < cols/rows; i++) {       //Цикл чередования переменной, от которой будет зависеть цвет строк
+        for (let i = 0; i < cols / rows; i++) {       //Цикл чередования переменной, от которой будет зависеть цвет строк
             if (j == 1) {
-                j--
-                console.log(j)
-                tr.className = 'blackCell'
+                j--;
+                console.log(j);
+                tr.className = 'blackCell';
             } else {
-                j++
-                console.log(j)
-                tr.className = 'whiteCell'
+                j++;
+                console.log(j);
+                tr.className = 'whiteCell';
             }
         };
-        
+
         for (let i = 0; i < cols; i++) {            //Цикл создания столбцов      
             let td = document.createElement('td');
             tr.appendChild(td);
 
-            for (let i = 0; i < cols/rows; i++) {   //Цикл чередования переменной, от которой будет зависеть цвет столбцов
+            for (let i = 0; i < cols / rows; i++) {   //Цикл чередования переменной, от которой будет зависеть цвет столбцов
                 if (j == 1) {
-                    j--
-                    console.log(j)
-                    td.className = 'blackCell'
+                    j--;
+                    console.log(j);
+                    td.className = 'blackCell';
                 } else {
-                    j++
-                    console.log(j)
-                    td.className = 'whiteCell'
+                    j++;
+                    console.log(j);
+                    td.className = 'whiteCell';
                 }
             }
-    };
-    parent.appendChild(table);
+        };
+        parent.appendChild(table);
+    }
 }
 
-}
-
-createChessBoard(block, 8, 8);
-
-
-
-
-
-// var elem = document.querySelector('#elem');
-
-// createTable(elem, 3, 3);
-
-// function createTable(parent, cols, rows) {
-// 	var table = document.createElement('table');
-	
-// 	for (var i = 0; i < rows; i++) {
-// 		var tr = document.createElement('tr');
-		
-// 		for (var j = 0; j < cols; j++) {
-// 			var td = document.createElement('td');
-// 			tr.appendChild(td);
-// 		}
-		
-// 		table.appendChild(tr);
-// 	}
-	
-// 	parent.appendChild(table);
-// }
+createChessBoard(block, 10, 10);
 
 

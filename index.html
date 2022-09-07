@@ -34,13 +34,27 @@
         .blackCell {
             background: black;
         }
+
+        table :first-child,
+        table :first-child :nth-child(n),
+        table :last-child :nth-child(n),
+        table :nth-child(n) :last-child,
+        table :last-child {
+            background: white;
+            height: 25px;
+        }
+
+        table :first-child,
+        table :nth-child(n) :last-child {
+            width: 25px;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div id="root"></div>
+    <div style="display: flex; align-items: center; justify-content: center; " id="root"></div>
 
     <script defer src="script.js"></script>
 </body>
