@@ -6,10 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изучение JavaScript</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+            empty-cells: hide;
+        }
+
+        tr,
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .whiteCell {
+            background: white;
+        }
+
+        .blackCell {
+            background: black;
+        }
+
+        table :first-child,
+        table :first-child :nth-child(n),
+        table :last-child :nth-child(n),
+        table :nth-child(n) :last-child,
+        table :last-child {
+            background: white;
+            height: 25px;
+        }
+
+        table :first-child,
+        table :nth-child(n) :last-child {
+            width: 25px;
+        }
+    </style>
+    <style>
+        .cart {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            width: 500px;
+
+        }
+
+        .catalog {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            width: 500px;
+
+        }
+
+        .productCard {
+            width: 200px;
+            height: 200px;
+            margin: 10px 0;
+            background: #cfcfcf;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <script src="script.js"></script>
+    <div class="cart" id="cart"></div>
+
+    <div class="catalog" id="catalog"></div>
+
+    <div style="display: flex; align-items: center; justify-content: center;" id="chess"></div>
+    <script defer src="script.js"></script>
 </body>
 
 </html>
