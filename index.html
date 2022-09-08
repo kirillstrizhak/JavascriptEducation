@@ -49,13 +49,50 @@
             width: 25px;
         }
     </style>
+    <style>
+        .cart {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            width: 500px;
+
+        }
+
+        .catalog {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            width: 500px;
+
+        }
+
+        .productCard {
+            width: 200px;
+            height: 200px;
+            margin: 10px 0;
+            background: #cfcfcf;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
 
 </head>
 
 <body>
+    <div class="cart" id="cart"></div>
 
-    <div style="display: flex; align-items: center; justify-content: center; " id="root"></div>
+    <div class="catalog" id="catalog"></div>
 
+    <div style="display: flex; align-items: center; justify-content: center;" id="chess"></div>
     <script defer src="script.js"></script>
 </body>
 
