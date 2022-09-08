@@ -186,7 +186,7 @@ console.log(risePower(5, 6))*/
 
 //Задача 1
 
-let result = '2 3 5 7';
+/*let result = '2 3 5 7';
 let i = 8;
 
 while (i <= 100) {
@@ -196,11 +196,11 @@ while (i <= 100) {
     i++;
 }
 
-console.log(result);
+console.log(result);*/
 
 //Задача 2
 
-let cartPrice = 0;
+/*let cartPrice = 0;
 let cart = [
     ['Толстовка', 4, 2000],
     ['Шорты', 3, 1000],
@@ -216,17 +216,98 @@ function countCartPrice() {
     return cartPrice;
 }
 
-countCartPrice();
+countCartPrice();*/
 
 //Задача 3
 
-let a
+/*let a
 
 for (a = 0; a < 9; console.log(++a)) {
 
+}*/
+
+/*function getNumberProperties() {
+    let inputNumber = prompt('Введите число от 0 до 999');
+    let arrNumber = inputNumber.split('');
+    let objNumber = { units, tens, hundreds };
+    objNumber['units'] = +inputNumber[1];
+    objNumber['tens'] = +inputNumber[2];
+    objNumber['hundreds'] = +inputNumber[3];
 }
 
+getNumberProperties()*/
 
+//Домашнее задание 4
+
+//Задача 1
+
+function numToObject() {
+    let inputNumber = prompt('Введите целое число от 0 до 999');
+    let arrNumber = inputNumber.split('');
+    let objNumber = {};
+    objNumber.units = +arrNumber[1];
+    objNumber.tens = +arrNumber[0];
+    if (arrNumber.length === 3) {
+        objNumber.units = +arrNumber[2];
+        objNumber.tens = +arrNumber[1];
+        objNumber.hundreds = +arrNumber[0]
+        console.log(objNumber);
+        return objNumber;
+    } else if (arrNumber.length === 2) {
+        delete objNumber.hundreds;
+        console.log(objNumber);
+    } else if (arrNumber.length === 1) {
+        objNumber.units = +arrNumber[0]
+        delete objNumber.tens;
+        delete objNumber.hundreds;
+        console.log(objNumber);
+        return objNumber;
+    } else if (inputNumber > 999) {
+        console.log('Ошибочка, введенное число больше 999');
+        return objNumber;
+    } else if (inputNumber = String) {
+        console.log('Ошибочка, это не число');
+        return objNumber;
+    }
+}
+
+//numToObject()
+
+//Задача 2
+
+let cartPrice = 0;
+let cart = {    //Создаём объект корзины со свойством массива и методом - функцией вычисления стоимости
+    products: [{       //Создаём массив товаров
+        name: 'Толстовка',
+        count: 4,
+        price: 2000
+    },
+    {
+        name: 'Шорты',
+        count: 3,
+        price: 1000
+    },
+    {
+        name: 'Брюки',
+        count: 3,
+        price: 2500
+    },
+    {
+        name: 'Кроссовки',
+        count: 2,
+        price: 5000
+    }
+    ],
+    countCartPrice: function () {
+        for (let i = 0; i < cart.products.length; i++) {
+            cartPrice += cart.products[i].count * cart.products[i].price;
+        };
+        console.log(`Общая цена корзины ${cartPrice}`)
+        return cartPrice
+    }
+}
+
+cart.countCartPrice() //Выводим полученное значение*/
 
 
 
