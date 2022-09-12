@@ -9,8 +9,8 @@ const product = {
     <tr>
     <td><img class = "itemImg" src = "${item.img}"></img></td>
             <td>${item.name}</td>
-            <td>${item.quantity}</td>
-            <td>${item.price}</td>
+            <td>${item.quantity} шт.</td>
+            <td>${item.price} ₽</td>
     </tr>`
     }
 }
@@ -70,7 +70,7 @@ const cart = {
             clearBtn.addEventListener('click', (e) => this.clearCart())
 
             for (let i = 0; i < this.products.length; i++) {
-                cartTable.insertAdjacentHTML('afterbegin', `${product.productRender(this.products[i])}`)
+                cartTable.insertAdjacentHTML('beforeend', `${product.productRender(this.products[i])}`)
             }
             cartTable.insertAdjacentHTML('afterbegin', `
         <tr class = "productsTabHead">
@@ -97,7 +97,7 @@ const catalog = {
         },
         {
             id: 2,
-            name: 'Iphone 11 Pro MAX',
+            name: 'IPhone 11 Pro MAX',
             quantity: 1,
             img: 'img/iphone11.jpg',
             price: 56999
@@ -108,6 +108,13 @@ const catalog = {
             quantity: 1,
             img: 'img/iphone12.jpg',
             price: 86229
+        },
+        {
+            id: 4,
+            name: 'Микроволновка',
+            quantity: 1,
+            img: 'img/microwaver.png',
+            price: 21600
         },
     ],
 
@@ -135,9 +142,11 @@ const catalog = {
             <td><img class = "itemImg" src = "${this.products[i].img}"></img></td>
             <td>${this.products[i].name}</td>
             <td>Есть в наличии</td>
-            <td>${this.products[i].price}</td>
+            <td>${this.products[i].price} ₽</td>
             <td><button id = buy-btn class = "buyButton item${(i + 1)}">Купить</button></td>
             </tr>`)
+
+            //let buyButtonItem = document.querySelector(`.item${i+1}`)
         }
 
         let buyButtonXR = document.querySelector('.item1')
@@ -148,6 +157,9 @@ const catalog = {
 
         let buyButton12 = document.querySelector('.item3')
         buyButton12.addEventListener('click', (e) => cart.addToCart(this.products[2]))
+
+        let buyButtonMicro = document.querySelector('.item4')
+        buyButtonMicro.addEventListener('click', (e) => cart.addToCart(this.products[3]))
 
     }
 }
