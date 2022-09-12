@@ -28,6 +28,22 @@
             padding: 25px;
         }
 
+        .buyButton {
+            color: white;
+            font-weight: bold;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            background: rgb(79, 235, 54);
+            transition: 0.1s;
+        }
+
+        .buyButton:hover {
+            cursor: pointer;
+            background: rgb(66, 200, 46);
+            transform: scale(1.05);
+        }
+
         .deleteButton {
             width: 30%;
             height: 30px;
@@ -47,30 +63,47 @@
         }
 
         .catalog {
+            width: 50%;
             display: flex;
+            align-items: center;
             flex-direction: column;
             border: 1px solid black;
             padding: 25px;
         }
 
-        .cartTable {
-            border-collapse: collapse;
+        .itemImg {
+            width: 60%;
+            height: 60%;
         }
 
-        .cartTabHead {
+        .productsTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .productsTabHead {
             background: rgb(147, 232, 19);
         }
 
-        .cartTable td {
+        .catalogTab {
+            background: rgb(100, 164, 233);
+        }
+
+        .productsTable td {
             padding: 10px 20px;
             text-align: center;
         }
 
-        .cartTable,
-        .cartTable tr,
-        .cartTable td {
-            border: 1px solid black;
+        .productsTable tr {
+            border: 1px solid rgb(194, 194, 194);
         }
+
+        /* .productsTable,
+        .productsTable tr,
+        .productsTable td {
+            border: 1px solid black;
+        } */
     </style>
 
 </head>
@@ -78,7 +111,7 @@
 <body>
     <div class="cart" id="cart"></div>
 
-    <!-- <div class="catalog" id="catalog"></div> -->
+    <div class="catalog" id="catalog"></div>
 
 
     <script defer src="script.js"></script>
