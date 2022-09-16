@@ -1,7 +1,5 @@
 'use strict';
 
-//Домашнее задание 6
-//Задача 1
 
 const product = {
     productRender(item) {
@@ -66,17 +64,16 @@ const cart = {
     },
 
     cartInit() {
-        this.cartRender()
-    },
-
-    cartRender() {
         let parentBlock = document.querySelector('.container')
         let nextBtn = document.createElement('button')
         nextBtn.className = 'buyButton'
         nextBtn.innerText = 'Далее'
         parentBlock.append(nextBtn)
         nextBtn.addEventListener('click', (e) => adress.adressInit())
+        this.cartRender()
+    },
 
+    cartRender() {
         const cartBlock = document.querySelector('#cart')
         cartBlock.innerHTML = ''
         let cartTable = document.createElement('table')
@@ -257,9 +254,6 @@ const comment = {
         <input style = "width: 600px; height: 100px; padding: 10px;" type = "text" placeholder = "Введите комментарий"></input>
         <button class = "buyButton" style = "margin-top:15px; action = "submit">Далее</button>
         `)
-
-        let nextBtn = document.querySelector('.buyButton')
-        nextBtn.addEventListener('click', (e) => clearPageCC())
     },
 
     clearPageComment() {
@@ -267,10 +261,4 @@ const comment = {
         commentBlock.remove()
     }
 
-}
-
-function clearPageCC() {
-    comment.clearPageComment()
-    cart.cartInit()
-    catalog.catalogInit()
 }
