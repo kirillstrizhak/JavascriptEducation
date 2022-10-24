@@ -14,11 +14,16 @@
 
         body {
             display: flex;
-            justify-content: space-around;
-            padding: 50px;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .cart {
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .blank {
             width: 50%;
             display: flex;
             align-items: center;
@@ -44,8 +49,15 @@
             transform: scale(1.05);
         }
 
+        .nextBtn {
+            margin-top: 30px;
+            margin-left: 30px;
+            width: 150px;
+            height: 40px;
+        }
+
         .deleteButton {
-            width: 30%;
+            width: 40%;
             height: 30px;
             margin: 15px 0;
             font-weight: 700;
@@ -62,18 +74,13 @@
             transform: scale(1.05);
         }
 
-        .catalog {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            border: 1px solid black;
-            padding: 25px;
+        .itemImg {
+            width: 60px;
+            height: 60px;
         }
 
-        .itemImg {
-            width: 60%;
-            height: 60%;
+        .hidden {
+            display: none;
         }
 
         .productsTable {
@@ -98,22 +105,15 @@
         .productsTable tr {
             border: 1px solid rgb(194, 194, 194);
         }
-
-        /* .productsTable,
-        .productsTable tr,
-        .productsTable td {
-            border: 1px solid black;
-        } */
     </style>
 
 </head>
 
 <body>
-    <div class="cart" id="cart"></div>
-
-    <div class="catalog" id="catalog"></div>
-
-
+    <div class="container">
+        <div class="blank" id="cart"></div>
+        <div class="blank" id="catalog"></div>
+    </div>
     <script defer src="script.js"></script>
 </body>
 
